@@ -9,14 +9,15 @@
       To make that happen for yourself...
       <ul>
         <li>Add the Mailgun addon to your application on heroku</li>
-        <li>Edit the heck out of your environment files
+        <li>Edit your environment files
           <ul>
             <li>development.rb</li>
             <li>production.rb</li>
             <li>test.rb</li>
           </ul>
           <ul>
-            <li>  
+            <li> 
+              ... to include:
               <ul>
                 <li>config.action_mailer.delivery_method = :smtp </li>
                 <li>config.action_mailer.smtp_settings = { </li>
@@ -32,16 +33,16 @@
           </ul>
         </li>
         <li>
-          Create a new mailer controller via rails g mailer User
+          Create a new mailer controller via 'rails g mailer User'
         </li>
         <li>
-          Create an action (ex: Call is welcome_user)
+          Define an action (ex: welcome_user(user))
         </li>
         <li>
           In the views/user_mailer/ directory... create and edit a welcome_user.html.erb
         </li>
         <li>
-          To send your message, UserMailer.welcome_user().deliver
+          To send your message, UserMailer.welcome_user(user).deliver
         </li>
       </ul>
     </p>
