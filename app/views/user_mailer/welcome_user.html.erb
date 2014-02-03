@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' />
+  </head>
+  <body>
+    <h1>Welcome to sending mail from a rails application!!, <%= @user.email %></h1>
+    <p>
+      To make that happen for yourself...
+      <ul>
+        <li>Add the Mailgun addon to your application on heroku</li>
+        <li>Edit the heck out of your environment files
+          <ul>
+            <li>development.rb</li>
+            <li>production.rb</li>
+            <li>test.rb</li>
+          </ul>
+          <ul>
+            By "Edit the heck out of"... I mean insert:
+            <li>  
+              config.action_mailer.delivery_method = :smtp </br>
+              </br>
+              config.action_mailer.smtp_settings = {  </br>
+                :authentication => :plain,  </br>
+                :address => "smtp.mailgun.org", </br>
+                :port => 587, </br>
+                :domain => "your applications domain", </br>
+                :user_name => "the email login mail gun gave you", </br>
+                :password => "your password" </br>
+              } </br>              
+            </li>
+          </ul>
+        </li>
+        <li>
+          Create a new mailer controller via rails g mailer User
+        </li>
+        <li>
+          Create an action
+        </li>
+        <li>
+          In the views directory... create and edit a .html.erb
+        </li>
+        <li>
+          To send your message
+        </li>
+      </ul>
+    </p>
+    
+  </body>
+</html>

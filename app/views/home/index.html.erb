@@ -1,0 +1,8 @@
+<h1>Nice Job</h1>
+
+<% if current_user %>
+	<a href="/shoot_mail">Shoot An Email!!!</a>
+<% else %>
+	<a href="<%= new_user_registration_path %>">Sign Up</a>
+<% end %>
+
