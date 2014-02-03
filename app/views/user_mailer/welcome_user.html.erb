@@ -16,18 +16,18 @@
             <li>test.rb</li>
           </ul>
           <ul>
-            By "Edit the heck out of"... I mean insert:
             <li>  
-              config.action_mailer.delivery_method = :smtp </br>
-              </br>
-              config.action_mailer.smtp_settings = {  </br>
-                :authentication => :plain,  </br>
-                :address => "smtp.mailgun.org", </br>
-                :port => 587, </br>
-                :domain => "your applications domain", </br>
-                :user_name => "the email login mail gun gave you", </br>
-                :password => "your password" </br>
-              } </br>              
+              <ul>
+                <li>config.action_mailer.delivery_method = :smtp </li>
+                <li>config.action_mailer.smtp_settings = { </li>
+                <li>  :authentication => :plain, </li>
+                <li>  :address => "smtp.mailgun.org",</li>
+                <li>  :port => 587,</li>
+                <li>  :domain => "your applications domain",</li>
+                <li>  :user_name => "the email login mail gun gave you",</li>
+                <li>  :password => "your password"</li>
+                <li>}  </li>
+              </ul>            
             </li>
           </ul>
         </li>
@@ -35,13 +35,13 @@
           Create a new mailer controller via rails g mailer User
         </li>
         <li>
-          Create an action
+          Create an action (ex: Call is welcome_user)
         </li>
         <li>
-          In the views directory... create and edit a .html.erb
+          In the views/user_mailer/ directory... create and edit a welcome_user.html.erb
         </li>
         <li>
-          To send your message
+          To send your message, UserMailer.welcome_user().deliver
         </li>
       </ul>
     </p>

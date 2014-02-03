@@ -1,6 +1,6 @@
 
 
-##You have a working rails application with devise!
+
 
 ```bash
 
