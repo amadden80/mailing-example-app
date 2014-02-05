@@ -1,32 +1,42 @@
+#You want to send email from your Rails app?
 
 
+###Mailers Using Action Mailer with SMPT:
+- config your environment to know your smpt settings
+- create a mailer `rails g mailer example_mailer example_message`
+- edit your views for the mailer
+- send:
+	- `ExampleMailer.example_message().deliver`
 
+---
 
-
-
+###Some more details:
 
 #development.rb
 
 ```ruby
 
-# If you want to see delivery errors
+#If you want to see delivery errors
 config.action_mailer.raise_delivery_errors = **true**
 
+#What email protical will you use?
 config.action_mailer.delivery_method = :smtp
 
 ```
 
 
-
+---
 
 ##MailGun on Heroku
 
+###Terminal
 ```bash
 
 heroku addons:add mailgun
 
 ```
 
+###development.rb
 ```ruby
 
 config.action_mailer.smtp_settings = {
@@ -41,7 +51,7 @@ config.action_mailer.smtp_settings = {
 ```
 
 
-
+---
 
 ##Gmail
 ```ruby
@@ -58,8 +68,9 @@ config.action_mailer.smtp_settings = {
 ```
 
 
-##Either way:
+---
 
+##Mailgun or Gmail... you need a mailer
 ```bash
 
 rails g mailer UserMailer greetings
@@ -85,6 +96,8 @@ class UserMailer < ActionMailer::Base
 end
 
 ```
+
+
 
 
 ---
