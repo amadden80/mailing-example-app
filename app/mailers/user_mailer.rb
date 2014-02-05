@@ -10,7 +10,6 @@ class UserMailer < ActionMailer::Base
 
 end
 
-
 # This is not part of the MAILER:
-# =>  UserMailer.welcome_user(user).deliver()
+#   UserMailer.welcome_user(user).deliver()
 
