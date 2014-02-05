@@ -46,7 +46,7 @@ MailingApp::Application.configure do
     :port => 587,
     :domain => "message-example-app.herokuapp.com",
     :user_name => "postmaster@message-example-app.herokuapp.com",
-    :password => "4sszm1jj4lk5"
+    :password => ENV['MAILGUN_PASSWORD']
   }
 
 
