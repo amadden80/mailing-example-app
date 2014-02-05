@@ -17,7 +17,7 @@ http://mailing-example-app.herokuapp.com/
 ```ruby
 
 #If you want to see delivery errors
-config.action_mailer.raise_delivery_errors = **true**
+config.action_mailer.raise_delivery_errors = true
 
 #What email protical will you use?
 config.action_mailer.delivery_method = :smtp
