@@ -1,5 +1,5 @@
 #You want to send email from your Rails app?
-
+http://mailing-example-app.herokuapp.com/
 
 ###Mailers Using Action Mailer with SMPT:
 - config your environment to know your smpt settings
